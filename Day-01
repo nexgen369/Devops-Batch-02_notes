@@ -77,3 +77,24 @@ Foundation Level and Associate Level (Solutions Architect Associate ):
 	-Cloud Watch
 	-SQS simple Que service
 9.Three Tier Architecture
+
+DevOps Tools:
+-------------
+1.GIT and GIT Hub
+2.Jenkins for CI/CD
+3.Terraform for IaC  
+4.Docker for containeraization  (AWS ECR)
+5.Kubernetes (AWS EKS)
+
+
+
+
+
+
+
+
+
+
+
+
+
