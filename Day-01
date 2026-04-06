@@ -1,0 +1,79 @@
+1.What is cloud computing?
+Cloud computing is nothing but on-demand delivery of IT resources over the internet with pay-as-you-go pricing model,
+You can access technical resources over the internet such as:
+
+-servers
+-storage
+-databases
+-networking
+-AI tools and many more
+
+This is called cloud computing
+
+Ex: Providers into market AWS/Azure/GCP
+
+Or 
+
+Instead of buying physical servers, companies rent IT resources over the internet
+
+-servers
+-storage
+-databases
+-networking
+-AI tools and many more
+
+This is called cloud computing
+
+Ex: Providers into market AWS/Azure/GCP
+
+Note: pay-as-you-go (means pay only for what you use)
+
+
+Simple Real Life Analogy:
+———————————
+Think of AWS like:
+	-Electricity service
+	-You don’t build a power plant
+	-You just use and pay for what you consume
+
+Same in AWS:
+	-No need to buy servers to run your application
+	-Pay only for usage
+
+Why AWS is Important?
+——————————
+-No upfront infrastructure cost
+-Scalable (increase or decrease anytime)
+-High reliable and secure
+-used by companies like (startups, government, largest enterprises, millions of Active users)
+
+Course Content / Core Was services:
+————————————————
+Foundation Level and Associate Level (Solutions Architect Associate ):
+
+1. Security Service:
+	IAM -Identity and Access Management
+2.Storage:
+	-Object storage S3(simple storage service)
+	-Block storage EBS (Elastic Block storage —only for EC2)
+	-File storage EFS (Elastic File system)
+3.Compute (servers)
+	-EC2 Elastic Compute Cloud (Virtual servers)
+	-ELB  Elastic Load Balancer, types of load balancers
+	-EC2 Autoscaling Group
+	-Lambda serverless
+4.Networking:
+	-VPC Virtual private Cloud 
+6.Database:
+	-RDS (Relational Database)
+	-Dynamo DB (Non Relational Database)
+	
+7.DNS and Content Delivery
+	-Route 53 DNS
+	-Cloud Front for CDN -content delivery network
+8.Monitorning services
+	-SNS Simple Notification service
+	-Cloud trail
+	-Cloud Watch
+	-SQS simple Que service
+9.Three Tier Architecture
