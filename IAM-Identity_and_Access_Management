@@ -1,0 +1,94 @@
+Account and Security-IAM Identity and Access Management:
+-------------------------------------------------------
+IAM nothing but who can access AWS services and what they can do ?
+User ---> Permission ----> Aws Service
+IAM Like security for AWS
+
+Root user and IAM User ?
+------------------------
+Root user:
+-The Account created when you first sing up for AWS
+-Root user Full access to EVERYTHING
+-Cannot be restricted
+-One per account
+-Root user can create IAM user
+-Root user create IAM user and grant specific persmission like (Ec2 access, S3 access, Database access etc)
+-Root can add or revoke permission any time for IAM user also can delete IAM user any time
+
+Note: Root user is like admin of admin -- should not used daily
+
+IAM User:
+-A user created inside the AWS for daily work
+-IAM user has limited access (bases on policies)
+-Multiple users can exist
+-Controlled permission
+
+Note: IAM users are for developers and Technical engineers
+
+REAL-LIFE EXAMPLE:
+------------------
+Root User --> Company owner ---> IAM user ---> Employees
+
+What Not To DO?
+---------------
+Use root user for Development, CI/CD, Daily login etc
+
+Best Practices:
+---------------
+Root User:
+Root user Enable MFA
+Do not use daily
+Keep credentials safe
+
+IAM User:
+Assing least privilege
+Use roles where possible
+Rotate keys
+
+Note:
+Root user has full access and should only be used for account setup. IAM users have controlled permission and are used for daily operations.
+
+
+Core Components:
+----------------
+1.Users : Indiivual person or application
+Ex: DevOps engineer or Developer
+
+2.Groups :
+Collection of Users
+Ex: Dev Team or Admin team
+
+3.Policies :
+JSON Rules that define persmission
+
+Note: polices define what action are allowed or denied
+
+4.Roles :
+Temporary access (no login required)
+used  --> S3 access
+lambda ---> DB access
+
+Note:roles are used by services, not people
+
+IAM Structure:
+--------------
+User --> Group ---> Policy ---> AWS access
+
+
+Types of AWS access:
+---------------------
+1.Console : Username + Password + MFA
+2.Programmatic : Access key + secret key
+
+
+
+
+
+
+
+
+
+
+
+
+
