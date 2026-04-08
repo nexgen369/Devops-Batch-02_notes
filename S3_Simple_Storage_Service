@@ -1,0 +1,66 @@
+Storage Service-S3 Simple Storage service:
+------------------------------------------
+
+S3 is an object storage service provided by aws that allows you to store and retrieve any amount of data from anywhere over the internet
+S3 is object storage service (you can upload images, files, movies, videos , csv files, folders etc)
+S3 is pay-as-you-go
+
+Core Concepts:
+---------------
+1. Bucket 
+  - A Container to store data
+  - Globally unique name
+
+2. Object
+  - The actual file/data
+  - Example: Photo.jpg, data.csv
+
+3.key
+  - Unique identifier of object inside bucket
+  - Example: images/photo.jpg
+
+Structure:
+-----------
+Bucket ----> Folder (optional) ----> Object
+
+Features:
+---------
+1. Unlimited Storage : Store virtually unlimted data
+2. High Durability : 99.999999999% (11 9's) durability, data replicated across mulitple AZs
+3. High Availability : Desinged for 99.99% availability
+4. Security : IAM policies, Bucket policies
+5. Storage classess (cost optimization):
+  - Standard storage (frequent access )
+  - intelligent-Tiering
+  - Glacier (for archive) (Infrequent access)
+
+Common use cases:
+----------------
+- Backup & restore
+- Static website hosting
+- Media storage (images/Videos)
+
+Example (Real Life Explanation)
+-------------------------------
+Imagine Google Drive, but for application ---> thats S3
+
+Note:
+S3 bucket public and private, nothing can block public access and unlock public access
+
+what is bucket versioning?
+--------------------------
+Versioning is a means of keeping multiple variants of an object in the same bucket.
+You can use versioning to preserve, retrieve, and restore every version of every object stored in your Amazon S3 bucket. 
+With versioning, you can easily recover from both unintended user actions and application failures
+
+
+
+
+
+
+
+
+
+
+
+
