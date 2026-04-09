@@ -1,0 +1,77 @@
+Cloud Front-CDN Content Delivery Network:
+-----------------------------------------
+
+-Our Application hosted in S3 bucket with public access
+
+what exactly the edge location(cloud front)
+-------------------------------------------
+World wide edge locations : 750+
+In India : 33 (In mumbai, delhi, banglore, chennai, kolkatha, hyderabad)
+
+When you browse youtube without Cloudfront there is high latency (low transfer speed)
+When you use aws cloudfront for you application there is low latency (high transfer speed)
+
+Cloudfront edge location?
+-------------------------
+-Edge location is a cache and delivery point places close to users.
+-Instead of serving content from a distant AWS region
+-Aws caches copies of your content at these edge sites and deliver it locally
+
+Where is it used?
+------------------
+-CDN Amazon Cloudfront
+-AWS WAF (Web application wire wall)
+
+
+How it Works (FLow):
+---------------------
+1.User request your app (e.g., website)
+2.Request hits nearest edge location 
+3.If content is cached ----> return immediately
+4.If not cached ----> feteched from origin (S3) stored and served
+
+Key characteristics:
+--------------------
+1.Low Latency
+  -Content served from nearest location
+  -Faster response
+
+2.Caching
+  -Static content cached like images, videos, JS/CSS, Reduces load backend (S3, EC2, ALB etc)
+
+3.Security layer: Acts as first entry point
+  -WAF Web application firewall: Filter traffic (http/https)
+
+
+Example (Real Scenario):
+------------------------
+Your website:
+.Backend -----> S3 (Mumbai Region)
+.Users -------> US, Europe, india
+
+without edge location:
+-All users hit mumbai ----> High latency (low transfer speed)
+
+without Cloudfront:
+-Us user -----> served from US edge location
+-Europe user ----> served from EU edge location
+-India user ------> served locally
+
+Finally : Faster load + reduced backend cost
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
