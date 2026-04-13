@@ -1,0 +1,89 @@
+What is Route 53?
+-----------------
+Route 53 is nothing but highly available and scalable DNS-(Domain Name System) web service
+53 is port of DNS
+
+
+In Simple terms:
+It translates human-friendly domain names (like www.shiva.com) into ip addresses (like 192.0.2.1) so browsers locate servers.
+
+Why the name Route 53?
+-----------------------
+Route ------> Traffic routing
+53 ---------> port 53 (used by DNS)
+
+Core Functions of Route 53?
+----------------------------
+1. Domain Registration
+  -You can buy and manage domain names
+  -Example: shiva.com
+
+2.DNS Routing
+  -Converts domain --->IP
+  -Routes user request to the correct server
+
+Example: User ---> www.shiva.com ----> Route 53 ----> EC2 Server IP
+
+3.Health Checks
+  -Monitors endpoints like (servers, APIs)
+  -If one server fails ---> automatically routes to healthy one
+
+How Route 53 works (step-by-step):
+-----------------------------------
+Flow:
+1.User enters www.shiva.com
+2.Request goes to DNS resolver
+3.Route 53 check hosted zone
+4.Returns IP address
+5.Browser connects to server
+
+Real Time Example:
+------------------
+Our Application Hosted in s3 and cloud front
+now want to access from domain which is www.shiva.com
+
+Key Components:
+---------------
+1.Hosted Zone
+-Container for DNS records
+Example: -public hosted zone and private hosted zone(inside VPC)
+
+2.DNS Records: Common ones:
+-A ----> IP address
+-CNAME ----> another domain
+-MX --------> email routing
+-TXT -------> verification
+
+Note:
+Route 53 = AWS DNS service that connects domain names to resources and intelligently routes traffic
+
+
+What is Name servers?
+Name servers nothing but are special DNS servers that store DNS records and answer queries for a domain
+they tells the internet "where your website lives."
+
+what is TLS certificate?
+------------------------
+A TLS (transport layer security) certificate is a digital certificate that enables secure (HTTPS) communication between a client (Browser)
+and a server
+
+It encrypts data and proves that the website is genuine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
