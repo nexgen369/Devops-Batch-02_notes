@@ -1,0 +1,73 @@
+What are the different types of cloud computing?
+
+1. Deployment models:
+  -Public Cloud
+  -Private Cloud
+  -Hybrid Cloud
+
+What is public cloud?
+Public cloud deliver resources, such as compute, storage, network, develop-and-deploy environments, applications over the intennet.
+they are owned and run by third party cloud service providers
+Like : AWS , Azure, Gcp
+
+What is private cloud?
+private cloud are built, run and used by a single organization, they provide greater control, customization and data security but come with similar cost.
+like: Bank Internal Infrastructure
+
+
+ what is hybrid cloud?
+ Enivironments that mix at least one private computing environment with one or more public cloud is called hybrid cloud
+ they allow you to leverage the resources and services from different computing environmnets and choose which is the most optimal for the 
+ work loads.
+like: own data center + AWS 
+
+
+2. Service Models:
+  -IaaS (Infrastructure as a service)
+  -PaaS (Platform as a service)
+  -SaaS (Software as a service)
+
+what is IaaS?
+IaaS deliver on-demand infrastructure resources, such as compute, storage, networking and virtualization. 
+with IaaS, the service provider "owns and operates the infrastructure", but customers will need to purchase and manage software 
+such as operating system, data and applications.
+
+Example:
+-AWS EC2(virtual servers)
+-Azure virtual machines
+-GCP compute Engine
+
+
+what is PaaS?
+PaaS deliver and manage hardware and software resources for developing, testing, delivering and managing cloud applications.
+provider offer developing tools and cloud databases with their PaaS offerings.
+
+Example: 
+AWS: Elastic bean stack
+Azure: App service
+GCP: Goolge App Engine
+
+
+What is SaaS?
+SaaS provides a full application stack as a service that customers can access and use.
+SaaS solutions often come as ready-to-use applications, which are managed and maintained by the cloud service provider.
+
+Example: 
+-Google(gmail)
+-Teams
+-Zoom
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
