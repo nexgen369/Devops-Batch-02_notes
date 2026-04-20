@@ -1,0 +1,80 @@
+SNS: Simple notification service:
+---------------------------------
+
+SNS is a fully managed messaging service from AWS.
+SNS used to send notifications and messages between applications, users and systems.
+
+SNS helps one system publish a message, and many receivers can subscribe to get that message instantly
+
+Example:
+--------
+If an order is placed on a shopping website,
+SNS can notify:
+  -customers by email/SMS
+  -Billing system
+  -Inventory system
+  -Delivery team
+
+HOW SNS Works: (Core components)
+---------------------------------
+1. Topic
+-A communication channel where messages are sent
+Ex: OrderPlacedTopic
+
+2.Publisher
+-The sender that publishes message to topic
+Ex: EC2 app, Lambda, cloudwatch alarm
+
+3.Subscriber
+-Receivers who get messages from topic
+
+Subscribers can be:
+-Email
+-SMS
+-HTTP/HTTPS endpoint
+
+Architecture Flow:
+------------------
+APP/Service ------> SNS Topic -----> Multiple subscribers
+
+Real AWS Example:
+-----------------
+-Amazon Cloudwatch detects CPU>90%
+-Sends alert to SNS Topic
+-SNS sends: Email to Admin, SMS to Engineers
+
+Benefits:
+---------
+-Fully managed
+-Scalable
+-Highly available
+-pay as you use
+-Fast message delivery
+
+Common Use Cases:
+-----------------
+-Alerts and Monitoring
+-Application notifications
+-Fan-out messaging
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
