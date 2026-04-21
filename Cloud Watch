@@ -1,2 +1,45 @@
 What is Cloud watch?
 --------------------
+-It helps you see the health and performance of your infrastructure
+
+What it monitors:
+-----------------
+-EC2 : CPU, Memory , disk , network
+when ever the CPU > 80% of EC2 instance you will trigger alarm from cloud watch and get notification from SNS.
+
+Definition:
+Cloud watch is a monitoring and observability service
+It collects metrics, logs and event from AWS resources and applications and 
+lets you:
+  -Monitor performance
+  -Set alarms
+  -Troubleshoot issues
+  -View dash boards
+
+Key fatures:
+-------------
+1.Metrics: collects utilization (EC2, CPU usage, disk I/O, memory, network
+2.Logs: collects data from application
+3.Alarms: Trigger actions when metrics across the threshold
+Example: If CPU > 80% for minutues ----> send alert or stop/start an instance.
+
+
+Demo:
+If CPU on an EC2 server goes above 85%:
+-Cloudwatch alarm triggers
+-Sends notification through SNS
+-Can trigger Autoscaling or restat actions
+
+Note:
+Cloud watch is monitoring service usedf to collect metrics, logs, set alarms and automate actions for cloud resources and applications
+
+
+
+
+
+
+
+
+
+
+
