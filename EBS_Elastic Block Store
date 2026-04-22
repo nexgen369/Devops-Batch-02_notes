@@ -1,0 +1,77 @@
+EBS = Elastic Block Store
+-------------------------
+
+-Its a block storage service used with EC2 instances.
+-Think of it a virtual hard disk(with HDD/SSD attached to your running EC2 instance)-virtual server
+-EBS specially desgined for EC2 instance
+-If EC2 is the computer, then EBS is the disk storage
+
+
+Why EBS is used?
+-----------------
+Used when you need:
+-OS installation disk for EC2
+-Persistent storage after reboot
+-Database storage
+-Application files
+-Logs storage
+-Backup via Snapshots
+
+Key Feature:
+------------
+Persistent storage: If EC2 stops/restarts, data remains
+Attach/Detach: You can attach and detach volumes multiple times or you can detach volume from one EC2 and attach to another EC2 (SAME AZ)
+Resize Anytime: Increase size without deleting disk
+
+Snapshot Backup:
+Take backup to S3 (managed internally by AWS)
+
+EBS is high performance with SSD/HDD options availale
+
+Types of EBS Volumes:
+---------------------
+A. SSD Types: gp3 (recommended) General purpose SSD
+
+used for : Web servers, medium databases, Dev/test
+
+B. HDD Type
+st1 Throughput optimized HDD
+used for: Big data, Logs, Streaming 
+
+
+Example Real-Time DevOps Usage:
+--------------------------------
+Example1: EC2 Linux Server
+-Launch EC2
+-Root volume=30GB gp3 EBS
+-Install application
+
+Example2: Database Server
+-EC2+MYSQL
+-Separate EBS volume 500GB io2
+
+Note:
+1.When you you attaching NEW EBS volume to running EC2 instance the EBS volume should same Availability zone
+2.If your EC2 is in us-east-1a but your EBS volume in us-east-1b if the case you can attach to EC2
+
+becuase of they designed for more availability
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
