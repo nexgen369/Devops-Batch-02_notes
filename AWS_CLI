@@ -1,0 +1,44 @@
+What is AWS ClI?
+----------------
+
+-AWS Cli is a programmatic access
+
+AWS Cli(Command line interface) is a tool that lets you interact with aws services directly from your computer's command line (like Terminal,
+Command prompt, or powershell)
+
+Insteados using the AWS web console, you can run commands to manage your cloud resources
+
+What you can do with AWS CLI?
+------------------------------
+-Create and manage aws resources like EC2 instances (Virtual servers)
+-Create S3 bucket upload/dowanload files from s3
+-Manage databases (RDS, DynamoDB)
+-Configure IAM users and permissions
+-Deploy and automate infrastructure
+
+Example commands:
+------------------
+1.list s3 buckets:   aws s3 ls
+2.upload a file to s3: aws s3 cp file.txt s3://my-bucket/
+3.start an EC2 instance: aws ec2 start-instance --instance-ids instanceID
+
+How it works:
+--------------
+1.You install the AWS cli on your machine
+2.configure with your credentails
+
+note:
+to configure you have to create aws access key and secret key
+
+
+
+
+
+
+
+
+
+
+
+
+
