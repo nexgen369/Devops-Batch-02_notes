@@ -1,0 +1,89 @@
+What is ELB-Elastic Load Balancer?
+-----------------------------------
+
+It is a managed service that "automatically distributes incoming application traffic across multiple targets such as EC2 instances", containers,
+IP addresses, and lambda functions.
+
+It Helps Improve:
+-High availability
+-Scalability
+-Performance
+-Security
+-Zero downtime deployment
+
+Why ELB is used?
+-----------------
+Without ELB:
+-One server may overlaod
+-slow response
+-downtime risk
+
+With ELB:
+-Traffic spreads evenly
+-healthy servers receive traffic
+-Failed server removed automatically
+
+
+what is OSI modesl?
+
+
+Types of ELB?
+--------------
+Four Types
+1.Application load balancer (ALB):
+Layer 7, best for HTTP/HTTPS apps
+
+used for:
+-Websites
+-APIs
+-Micro-services
+-Kubernetes ingress
+-Containers(ECS/EKS)
+
+Works at Layer 7
+-URL path(/login, /payment)
+-Hostnames (api.company.com)
+
+Example: Micro services app:
+1. /login -----> Server A
+2. /api -------> Server B
+3. /admin ------> Server C
+
+
+Real Time Example 1: E - Commerce website (Amazon/Flipkart style)
+-----------------------------------------------------------------
+Users--->Route 53 ---> ALB ----> EC2 Autosaling ----> RDS
+
+Sceario:
+---------
+During Big Billion Day Sale, 5 Lakh users open website.
+
+Without ELB:
+------------
+-One server gets overlaoded
+-website crashes
+-Slow checkout
+
+With ALB:
+----------
+-Traffic Distributes across many EC2 servers
+- /Products goes to app servers
+- /Payment goes to payment service
+
+If one server dies, remove automatically add new server automatically by EC2 autoscaling
+
+
+2.Network load balancer(NLB):
+Layer 4, best for TCP/UDP performance
+
+3.Gateway Load balancer(GWLB):
+Layer 3/4, best for security applications
+
+4.Classic Load Balancer(CLB):
+Layer 4/7 , older generation
+
+
+
+
+
+
