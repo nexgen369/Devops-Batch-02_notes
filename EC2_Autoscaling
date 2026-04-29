@@ -1,0 +1,33 @@
+What is EC2 autoscaling group?
+Ec2 Autoscaling nothing but add or remove EC2 instances automatically
+
+or
+
+EC2 autoscaling nothing but that automatically adust the number of EC2 instances in your infrastructure based on demand, means 
+add or remove instances automatically.
+it ensures high availability, cost optimization of application.
+
+Core concept:
+-------------
+-Traffic ----> instances automatically increases
+-Traffic -----> instances automatically decreases
+-Failes instance ----> automatically replaced
+
+Components:
+-----------
+1. Launch template:
+Defines how instances are created:
+Includes:
+-AMI (OS image) 
+-EBS (Block storage)
+-Networking
+-Security groups
+-key pair
+
+2.Group Size:
+AGS is the backbone it defines:
+-Minimum instances size : 1
+-Desired instances size : 4
+-Maximum instances size : 500
+
+
