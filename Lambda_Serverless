@@ -1,0 +1,70 @@
+What is lambda?
+---------------
+-Lambda is a severless compute service
+-Runs code without managing servers
+-Executes code only when triggered
+-Billing is based on: (number of request, and execution time(ms)
+-lambda support multiple run time like python, java, node.js etc
+
+note: Event-driven execution
+
+Example of events:
+-------------------
+File upload (PUT)
+File deletion (DELETE)
+Restore events
+
+What is S3 lambda trigger?
+when something happens in S3, it automatically invokes lambda
+
+Example Flow:
+-------------
+User uploads file ---> S3 bucket ---> Event ---> Lambda trigger ---> Processing happens
+
+Explanation:
+------------
+1.File uploaded to S3 bucket
+2.S3 generates event
+3.Event sent to lambda
+4.Lambda processing file
+5.Output stored/logged in Cloudwatch
+
+Common Use Cases:
+-----------------
+1. File Processing
+-Resize the images
+-Convert formats (CSV --> JSON)
+
+2.Automation
+-Trigger notifications (SNS/EMAIL)
+-Start work flows
+
+How to Configure:
+-----------------
+Step 1: Create S3 bucket
+Step 2: Create a lambda function
+Step 3: Add trigger
+step 4: Check cloud watch logs once you upload object in s3 bucket
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
