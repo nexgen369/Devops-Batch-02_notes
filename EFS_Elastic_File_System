@@ -39,6 +39,29 @@ wordpress
 media websites
 
 
+Hands-on Lab:
+-------------
+Step 1: Create EC2 instance
+Note: While creating a security group for instance allow NFS in the inbound rules
+
+Step 2: Create EFS
+
+Step 3: Attach File system to the linux machine (EC2)
+
+Step 3: copy EC2 public IP address check the output
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
