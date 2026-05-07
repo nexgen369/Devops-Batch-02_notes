@@ -1,0 +1,52 @@
+What is EFS?
+Elastic File System: 
+
+EC2 : EBS hard disk you can attach multiple EBS to sinlge instance but not multiple
+EC2: EFS file sharing can share to multiple instances 
+
+
+EFS managed shared file storage service
+It allows multiple servers (EC2 instances)
+It works like a network shared drive in the Cloud
+It deals NFS protocol
+
+Real-Time Example:
+-------------------
+Imagine:
+1. 3 applications servers running in autoscaling
+2. All servers need access to:
+  upoaded images
+  logs
+  shared configuration files
+  website content
+
+Instead of storing files separately on each server, all servers connect to one shared storage.
+
+Key Features:
+-------------
+1. Fully managed (handles maintenance and scaling)
+2. shared storage (multiple EC2s can access same files)
+3.Linux files system uses NFS protocol (Network File System)
+4.All instances read files, write files, update files
+
+Use cases:
+----------
+1. Web Application
+shared websites files across servers.
+
+Example:
+wordpress
+media websites
+
+
+
+
+
+
+
+
+
+
+
+
+
