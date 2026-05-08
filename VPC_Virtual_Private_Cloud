@@ -1,0 +1,127 @@
+What is AWS VPC ?
+VPC (Virtual private cloud) is a private network inside the AWS where you launch and manage your cloud resources securely.
+
+Think of it like:
+" A Private data center network inside AWS "
+
+Inside VPC, you can launch:
+-EC2 servers
+-Databases
+-Containers
+-Load Balancers
+
+You control:
+-IP Address ranges
+-Subnets
+-Routing
+-Internet access (Internet gateway and NAT gateway)
+-Security rules
+
+Simple Real-Time Example:
+-------------------------
+Example:Imagine building a company office.
+
+Real World                        AWS VPC
+--------------------------------------------------
+Office Building                   VPC
+Rooms/Floors                      Subnets
+Security Guards                   Security groups
+Roads                             Route Tables
+Internet Gateway                  Main Entrance
+Employees                         EC2 instances
+
+Components of VPC:
+---------------------
+1. VPC
+The main isolated network
+VPC CIDR(classless inter domain): 10.0.0.0/16 (IPv4-Internet protocol version 4)
+
+Note:
+This means Total IP range available inside VPC
+Can create many subnets
+
+2. Subnets (subdivisions inside VPC)
+Two Types of Subnets:
+    a. Public Subnet
+    b. Private subnet
+
+a. Public subnet
+- Has internet access
+- Used for web servers, load balancers, bastion hosts
+
+Example: subnet CIRD: 10.0.1.0/24
+
+b. Private subnet
+-No direct internet access
+-used for databases, internal application
+
+Example:  10.0.2.0/24
+
+3. Internet gateway (IGW)
+Allows communication between (VPC <----> Internet)
+
+Without IGW (No internet access)
+IGW is allows internet access to public
+IGW is attached to VPC
+
+Flow: Public EC2 ----> Internet gateway ---> Internet
+
+
+4. Route table (controls traffic Flow):
+
+Example:
+Destination                    Target
+0.0.0.0/0                      Internet Gateway
+
+meaning: Send all internet traffic to IGW
+
+Types:
+a.Public Route table
+b.Private Route table
+
+5. Security Group Rules:
+
+Example:
+Allows Inboubd Rules:
+Port 22 ---> SSH
+Port 80 ---> HTTP
+port 443 ---> HTTPS
+
+Outbound Rules:
+All traffic
+
+6.NAT Gatway
+used when:
+-Private subnet servers need internet
+-But internet should NOT access them directly
+
+Example: Database server downloading patches
+
+Flow: Private EC2 ----> NAT Gateway ----> Internet
+
+7. Create EC2 instances
+Public EC2 ----> Internte gateway (IGW)
+Private EC2 ----> NAT Gateway
+
+
+Task : Learn about IP addressing Classess
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
