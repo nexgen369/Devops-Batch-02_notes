@@ -1,0 +1,328 @@
+What is Jenkins?
+Jenkins is an open-source automation tool mainly used for:
+  -Contineous Integration (CI)
+  -Contineous Delivery (CD)
+  -Build Automation
+  -Deployment Automation
+  -Testing Automation
+
+Note: Jenkins helps automate software development lifecycle
+
+"Jenkins is a tool that automatically builds, tests, and deploy application whenever developers make code changes"
+
+Why Jenkins is Important?
+---------------------------
+Before Jenkins:
+-Developer writes code
+-Manually build application
+-Manually test
+-Manually deploy
+-Takes more time
+-Human errors happen
+
+After Jenkins:
+1.Developer push code to githu
+2.Jenkins automatically:
+  pulls code
+  builds application
+  Runs tests
+  Deploy to server
+
+Note: Everything becomes automated
+
+
+Real-Time Example:
+-------------------
+Scenario: E-Commerce Website
+Company uses:
+-GitHub ---> Source code
+-Jenkins ---> Automation CI/CD
+-AWS EC2 ---> Application server
+-AWS S3 ----> Store build artifacts
+-Docker ---> Containerization
+
+WorkFlow:
+----------
+Developer push code to GitHub.
+
+Jenkins automatically:
+1.Detects code change
+2.Downloads latest code
+3.Build application
+4.Runs tests
+5.Create Docker images
+6.Pushes image to AWS ECR
+7.Deploys application to ECS
+
+This is called : CI/CD Pipelines
+
+Jenkins Architecture: Main Components
+--------------------------------------
+1.Jenkins Master (Controller)
+-Managing Jobs
+-Sechudling builds
+-Managing plugins
+-Monitorning Agents
+
+2.Jenkins Agent(worker node)
+-Executing build jobs
+-Running tests
+-Deplpoyments
+
+Jenkins Pipeline Flow:
+----------------------
+Developer->GitHub->Jenkins Trigger->Build Application->Run Tests->Create Artifacts->Deploy to AWS->Application Live
+
+Features of Jenkins:
+---------------------
+-Open source free to use
+-Plugin support thousands of plugins support
+-CI/CD automation
+-Easy Integration
+-Pipeline as code : jenkinsfile
+
+Jekins in AWS Environment: Commonly aws services used with Jenkins:
+--------------------------------------------------------------------
+1.AWS EC2 : Jenkins server hosting
+2.AWS S3 : store Artifacts/backups
+3.AWS ECR : Store docker images
+4.AWS ECS : Container deployment
+5.AWS IAM : Access Permissions
+
+Real Time Example:
+--------------------
+Project: Java Application Deployment
+Step 1: Developer push code to GitHub
+
+Step 2: Jenkins Triggered (webhook triggers Jenkins pipelines)
+
+Step 3: Jekins pulls code
+
+Step 4: Build Application for Maven Projects
+WAR/JAR file gets generated
+
+Step 5: Store artifacts in S3
+
+Step 6: Deploy to EC2
+restart application
+
+
+Jenkins Intallation on AWS EC2
+
+1.Configure EC2
+Select:
+AMI: Ubuntu Server 22.04 LTS
+Instance Type: t2.micro
+Key Pair: Create or use existing .pem key
+Storage: Default 8 GB is enough
+
+commands to install Jenkins on EC2:
+-----------------------------------
+2.Connect to EC2 instance
+3.Install Java on Ubuntu
+
+## Recommended EC2 Configuration
+
+* Ubuntu 22.04 LTS or 24.04 LTS
+* Instance Type: t2.micro
+
+
+I updated the document into a clean single-sheet command reference that you can directly share with your team.
+# Jenkins Installation Commands Sheet (Ubuntu EC2)
+
+## Update Server
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+---
+
+## Install Java
+
+```bash
+sudo apt install -y fontconfig openjdk-21-jdk
+```
+
+## Verify Java
+
+```bash
+java -version
+```
+
+---
+
+## Download Jenkins Package
+
+```bash
+wget https://pkg.jenkins.io/debian-stable/binary/jenkins_2.516.1_all.deb
+```
+
+---
+
+## Install Jenkins
+
+```bash
+sudo dpkg -i jenkins_2.516.1_all.deb
+```
+
+---
+
+## Fix Dependency Issues (If Required)
+
+```bash
+sudo apt --fix-broken install -y
+```
+
+## Reinstall Jenkins
+
+```bash
+sudo dpkg -i jenkins_2.516.1_all.deb
+```
+
+---
+
+## Reload Systemd
+
+```bash
+sudo systemctl daemon-reload
+```
+
+---
+
+## Start Jenkins
+
+```bash
+sudo systemctl start jenkins
+```
+
+---
+
+## Enable Jenkins Service
+
+```bash
+sudo systemctl enable jenkins
+```
+
+---
+
+## Check Jenkins Status
+
+```bash
+sudo systemctl status jenkins
+```
+
+---
+
+## Get Jenkins Admin Password
+
+```bash
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
+---
+
+## Install Git
+
+```bash
+sudo apt install git -y
+```
+
+---
+
+## Verify Git
+
+```bash
+git --version
+```
+
+---
+
+## Restart Jenkins
+
+```bash
+sudo systemctl restart jenkins
+```
+
+---
+
+## Jenkins URL
+
+```text
+http://<EC2-PUBLIC-IP>:8080
+```
+
+Create First Admin User:
+========================
+username : siva
+password: kumar
+Fullname: sivakumar
+Email: vsivakumar668@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
