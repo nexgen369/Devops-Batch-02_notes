@@ -1,0 +1,147 @@
+1.What is Docker?
+Docker is a containerization platform used to package an application along with everything it need to run.
+-code
+-runtime
+-libraries
+-dependencies
+-configurations
+
+This package is called a container
+
+Note:
+Docker allows developers/devops to "Build once and run anywhere"
+
+wheather your application runs on:
+-laptop
+-Testing server
+-AWS EC2
+-Kubernetes cluster
+-production environment
+
+Note:
+It behaves the same everywhere
+
+2.Why docker was introduced?
+Before Docker, developers used to say:
+
+"It works on my machine"
+
+Becuase:
+-Different OS version
+-Different package versions
+-Missing libraries
+-Different runtime
+
+would break the application
+Docker solves this problem
+
+3.Real-Time Example:
+---------------------
+Without Docker
+Developers laptop:
+-Python 3.12
+-Flask 3.0
+-Ubuntu 22
+
+
+Server:
+-Python 3.8
+-Missing libraries
+-Different OS
+
+Application fails
+
+With Docker:
+------------
+Application + Python + Flask + Dependencies are packed together into a container
+It runs exactly same everywhere
+
+4.What is container?
+--------------------
+A Container is:
+-Lightweight
+-Portable
+-Fast
+-isolated environment
+
+That runs your application
+
+5.Real Life Analogy:
+--------------------
+Shipping container can carry:
+A shipping container can carry:
+-TVs
+-Cars
+-Food
+-Cloths
+
+The port does not care what is inside.
+
+Similarly:
+Docker container carries:
+-Java app
+-Python app
+-Node.JS app
+
+The server does not care
+Docker standardizes application deployments
+
+
+6.Docker vs Virtual machines:
+-----------------------------
+Feature:              Docker Container:            Virtual Machine:
+------------------------------------------------------------------
+Size                  Small                        Large
+Boot Time             Seconds                      Minutes
+Performance           Fast                         Slower
+OS includesd          No                           Yes
+Resource usage        Low                          High
+
+
+7.Architecture of Docker:
+--------------------------
+Main components
+1.Docker Client
+Where commands are executed
+Ex: docker run nginx
+
+2.Docker Daemon
+Background service that manages:
+-Containers
+-Images (blueprint)
+-Networks
+-Volumes
+
+3.Docker Registry:
+Stores docker images
+Ex: Docker hub  
+Install the docker hub using following command:
+(https://docs.docker.com/desktop/setup/install/windows-install/)
+
+Popular registries to store images:
+------------------------------------
+From AWS : ECR (Elastic container registry)
+From GitHub : Container Registry
+
+
+8.Docker workflow:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
