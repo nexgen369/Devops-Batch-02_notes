@@ -125,6 +125,114 @@ From GitHub : Container Registry
 
 
 8.Docker workflow:
+Step 1 - Write Application
+Ex: Python Flask app
+
+Step 2 - Create Dockerfile
+Defines:
+  Base OS
+  Dependencies
+  Commands
+
+Step 3 - Build Image
+command: "docker build -t myapp ." (creates the docker image)
+
+Step 4 - Run Container
+command: "docker run myapp" (Container starts)
+
+9.Docker Terms:
+----------------
+
+Docker Image : Blueprint/template for container.
+Ex: nginx, ubutu, python, mysql
+
+Real Life Example:
+-------------------
+Image = Cake recipe
+container = Actual cake
+
+Docker container : Running Instances of image
+Ex: "docker run nginx"
+
+Dockerfile: Text file with instructions to build image
+
+                FROM python:3.12
+                COPY . .
+                RUN pip install -r requirement.txt
+                CMD ["python","app.py"]
+
+Docker Hub:
+-----------
+Public repository for Docker images
+
+like: 
+GitHub for code
+Docker Hub for images
+
+10.Basic Docker Commands:
+--------------------------
+
+check docker version: "docker --version"
+pull image: "docker pull nignx"  
+List Images: "docker images"
+Run Container: "docker run nginx"
+Run in Background: "docker run -d nginx"
+List Running Containers: "docker ps"
+Stop containers: "docker stop <container-id>"
+Remove Image: "docker rmi nginx"
+
+11.Port mapping
+Problem
+Container runs internally
+Need external access
+Solution: command "docker run -p 80:80 nginx" (meaning: Host port : Container port)
+Browser: "http://localhost (opens nginx)
+
+12.Dockerfile - Full Explanation
+
+      FROM python:3.12
+      WORKDIR /app
+      COPY . .
+      RUN pip install -r requirements.txt
+      EXPOSE 5000
+      CMD ["python","app.py"]
+
+
+Explanation:
+Command:              Meaning:
+-------------------------------
+FROM                  Base image
+WORKDIR               working directory
+COPY                  Copy files
+RUN                   Execute command
+EXPOSE                Open port
+CMD                   Start application
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
